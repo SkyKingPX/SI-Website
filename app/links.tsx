@@ -5,7 +5,7 @@ export const LINKS = {
     twitch: "https://www.twitch.tv/kalarianyt",
     instagram: "https://www.instagram.com/soncresityindustries",
 
-    modrinth_org: "https://modrinth.com/user/SoncresityIndustries",
+    modrinth_org: "https://modrinth.com/organization/soncresityindustries",
     curseforge_profile: "https://www.curseforge.com/members/soncresityindustries/projects",
 
     github_org: "https://github.com/Soncresity-Industries",

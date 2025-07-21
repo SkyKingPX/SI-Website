@@ -15,7 +15,7 @@ export function Footer() {
                     <span className="text-lg font-semibold text-primary">Refined Obsidian</span>
                 </div>
                 <p className="text-sm text-muted-foreground text-center md:absolute md:left-1/2 md:-translate-x-1/2">
-                    © {new Date().getFullYear()} EmberForge Development | All Rights Reserved
+                    © {new Date().getFullYear()} Soncresity Industries | All Rights Reserved
                 </p>
                 <div className="flex gap-2">
                     <a href={LINKS.github_org} target="_blank" rel="noopener noreferrer"

@@ -2,13 +2,12 @@
 
 import Head from "next/head"
 import Link from "next/link"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { BookOpen, ExternalLink } from "lucide-react"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
+import {Badge} from "@/components/ui/badge"
+import {BookOpen, ExternalLink} from "lucide-react"
 import Header from "@/app/header"
 import Footer from "@/app/footer"
 import {useScroll} from "framer-motion"
-
 
 export default function WikiPage() {
     
@@ -32,7 +31,7 @@ export default function WikiPage() {
         <Header scrollProgress={scrollYProgress}/>
       <Head>
         <title>EmberForge Wiki</title>
-        <meta name="description" content="All Wikis for the content developed by EmberForge Development" />
+        <meta name="description" content="All Wikis for the content developed by Soncresity Industries" />
       </Head>
       <div className="container mx-auto px-4 py-8">
         {/* Header Section */}
@@ -40,10 +39,10 @@ export default function WikiPage() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
             <BookOpen className="h-8 w-8 text-primary" />
-            <h1 className="text-4xl font-bold text-primary">EmberForge Wiki</h1>
+            <h1 className="text-4xl font-bold text-primary">Soncresity Wiki</h1>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive documentation and guides for all EmberForge Development projects. Find detailed information
+            Comprehensive documentation and guides for all Soncresity Industries projects. Find detailed information
             about our mods, features, and how to use them.
           </p>
         </div>

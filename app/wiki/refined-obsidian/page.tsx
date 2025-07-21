@@ -1,18 +1,18 @@
 "use client"
 
-import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import {
     ArrowLeft,
     ArrowRight,
     ChevronRight,
+    Download,
     FileText,
+    Flame,
     Menu,
     Package,
     Pickaxe,
-    Flame,
-    Scissors, Download,
+    Scissors,
 } from "lucide-react"
 import {Footer} from "@/app/wiki/refined-obsidian/ro-footer"
 import {useTheme} from "next-themes"
@@ -20,14 +20,21 @@ import {useEffect, useState} from "react"
 import {LINKS} from "@/app/links"
 import {recipes} from "@/app/wiki/refined-obsidian/ro-recipes"
 import {Button} from "@/components/ui/button"
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card"
+import {Card, CardContent, CardFooter} from "@/components/ui/card"
 import {Separator} from "@/components/ui/separator"
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
 import {ThemeToggle} from "@/components/theme-toggle"
 import {trimsPage1, trimsPage2, trimsPage3, trimsPage4} from "@/app/wiki/refined-obsidian/ro-trims-pages"
-import {blocksPage1, blocksPage2, blocksPage3, blocksPage4, blocksPage5} from "@/app/wiki/refined-obsidian/ro-blocks-pages"
+import {
+    blocksPage1,
+    blocksPage2,
+    blocksPage3,
+    blocksPage4,
+    blocksPage5
+} from "@/app/wiki/refined-obsidian/ro-blocks-pages"
 
 export default function ROWikiPage() {
+
     const {theme} = useTheme()
     const [mounted, setMounted] = useState(false)
     const [recipeIndex, setRecipeIndex] = useState(0)
@@ -80,10 +87,6 @@ export default function ROWikiPage() {
     return (
         <div className="min-h-screen theme-transition">
             {/* Header */}
-            <Head>
-                <title>Refined Obsidian Wiki</title>
-                <meta name="description" content="The official Wiki for the Refined Obsidian Mod by EmberForge Development" />
-            </Head>
             <header
                 className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur theme-transition">
                 <div className="container flex h-16 items-center justify-between">
@@ -215,7 +218,7 @@ export default function ROWikiPage() {
                                     Refined Obsidian Wiki
                                 </h1>
                                 <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
-                                    A Minecraft Mod by EmberForge Development that adds various obsidian-themed items,
+                                    A Minecraft Mod by Soncresity Industries that adds various obsidian-themed items,
                                     blocks and armor trims.
                                 </p>
                                 <div className="mt-6 flex flex-wrap justify-center gap-4">

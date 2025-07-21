@@ -6,7 +6,7 @@ import {Card, CardDescription, CardFooter, CardHeader, CardTitle} from "@/compon
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ArrowRight} from "lucide-react";
-import {useState, useEffect, useRef} from "react"
+import {useEffect, useRef, useState} from "react"
 import {projects} from "../project-list";
 import {useTheme} from "next-themes";
 
