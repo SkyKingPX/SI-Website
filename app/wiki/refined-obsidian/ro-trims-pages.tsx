@@ -7,7 +7,7 @@ export function trimsPage1() {
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/trims/netherite.png"
+                        src="/assets/refined-obsidian/trims/netherite.png"
                         alt="Netherite"
                         width={180}
                         height={180}
@@ -25,7 +25,7 @@ export function trimsPage1() {
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/trims/diamond.png"
+                        src="/assets/refined-obsidian/trims/diamond.png"
                         alt="Diamond"
                         width={180}
                         height={180}
@@ -50,7 +50,7 @@ export function trimsPage2() {
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/trims/gold.png"
+                        src="/assets/refined-obsidian/trims/gold.png"
                         alt="Gold"
                         width={180}
                         height={180}
@@ -68,7 +68,7 @@ export function trimsPage2() {
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/trims/iron.png"
+                        src="/assets/refined-obsidian/trims/iron.png"
                         alt="Iron"
                         width={180}
                         height={180}
@@ -93,7 +93,7 @@ export function trimsPage3() {
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/trims/chainmail.png"
+                        src="/assets/refined-obsidian/trims/chainmail.png"
                         alt="Chainmail"
                         width={180}
                         height={180}
@@ -111,7 +111,7 @@ export function trimsPage3() {
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/trims/leather.png"
+                        src="/assets/refined-obsidian/trims/leather.png"
                         alt="Leather"
                         width={180}
                         height={180}
@@ -136,7 +136,7 @@ export function trimsPage4() {
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/trims/turtle.png"
+                        src="/assets/refined-obsidian/trims/turtle.png"
                         alt="Tutel XD"
                         width={180}
                         height={180}

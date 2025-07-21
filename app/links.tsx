@@ -8,10 +8,14 @@ export const LINKS = {
     modrinth_org: "https://modrinth.com/user/SoncresityIndustries",
     curseforge_profile: "https://www.curseforge.com/members/soncresityindustries/projects",
 
-    github_org: "https://github.com/SoncresityIndustries",
-    github_repos: "https://github.com/orgs/SoncresityIndustries/repositories",
+    github_org: "https://github.com/Soncresity-Industries",
+    github_repos: "https://github.com/orgs/Soncresity-Industries/repositories",
 
-    ro_github_repo: "https://github.com/SoncresityIndustries/RefinedObsidian",
-    ro_curseforge_project: "https://www.curseforge.com/minecraft/mc-mods/refinedobsidian",
-    ro_modrinth_project: "https://modrinth.com/mod/refinedobsidian",
+    ro_github_repo: "https://github.com/Soncresity-Industries/si-refined-obsidian",
+    ro_curseforge_project: "https://www.curseforge.com/minecraft/mc-mods/si-refined-obsidian",
+    ro_modrinth_project: "https://modrinth.com/mod/si-refined-obsidian",
+
+    db_github_repo: "https://github.com/Soncresity-Industries/si-deathbolt",
+    db_curseforge_project: "https://www.curseforge.com/minecraft/mc-mods/si-deathbolt",
+    db_modrinth_project: "https://modrinth.com/mod/si-deathbolt",
 }

@@ -7,7 +7,7 @@ export function blocksPage1() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/cobbled_obsidian.png"
+                        src="/assets/refined-obsidian/items/cobbled_obsidian.png"
                         alt="Cobbled Obsidian"
                         width={64}
                         height={64}
@@ -26,7 +26,7 @@ export function blocksPage1() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/cobbled_obsidian_slab.png"
+                        src="/assets/refined-obsidian/items/cobbled_obsidian_slab.png"
                         alt="Cobbled Obsidian Slab"
                         width={64}
                         height={64}
@@ -45,7 +45,7 @@ export function blocksPage1() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/cobbled_obsidian_stairs.png"
+                        src="/assets/refined-obsidian/items/cobbled_obsidian_stairs.png"
                         alt="Cobbled Obsidian Stairs"
                         width={64}
                         height={64}
@@ -64,7 +64,7 @@ export function blocksPage1() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/cobbled_obsidian_wall.png"
+                        src="/assets/refined-obsidian/items/cobbled_obsidian_wall.png"
                         alt="Cobbled Obsidian Wall"
                         width={64}
                         height={64}
@@ -90,7 +90,7 @@ export function blocksPage2() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/obsidian_bricks.png"
+                        src="/assets/refined-obsidian/items/obsidian_bricks.png"
                         alt="Obsidian Bricks"
                         width={64}
                         height={64}
@@ -109,7 +109,7 @@ export function blocksPage2() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/obsidian_brick_slab.png"
+                        src="/assets/refined-obsidian/items/obsidian_brick_slab.png"
                         alt="Obsidian Brick Slab"
                         width={64}
                         height={64}
@@ -127,7 +127,7 @@ export function blocksPage2() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/obsidian_brick_stairs.png"
+                        src="/assets/refined-obsidian/items/obsidian_brick_stairs.png"
                         alt="Obsidian Brick Stairs"
                         width={64}
                         height={64}
@@ -146,7 +146,7 @@ export function blocksPage2() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/obsidian_brick_wall.png"
+                        src="/assets/refined-obsidian/items/obsidian_brick_wall.png"
                         alt="Obsidian Brick Wall"
                         width={64}
                         height={64}
@@ -172,7 +172,7 @@ export function blocksPage3() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/obsidian_tiles.png"
+                        src="/assets/refined-obsidian/items/obsidian_tiles.png"
                         alt="Obsidian Tiles"
                         width={64}
                         height={64}
@@ -191,7 +191,7 @@ export function blocksPage3() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/obsidian_tile_slab.png"
+                        src="/assets/refined-obsidian/items/obsidian_tile_slab.png"
                         alt="Obsidian Tile Slab"
                         width={64}
                         height={64}
@@ -209,7 +209,7 @@ export function blocksPage3() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/obsidian_tile_stairs.png"
+                        src="/assets/refined-obsidian/items/obsidian_tile_stairs.png"
                         alt="Obsidian Tile Stairs"
                         width={64}
                         height={64}
@@ -227,7 +227,7 @@ export function blocksPage3() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/obsidian_tile_wall.png"
+                        src="/assets/refined-obsidian/items/obsidian_tile_wall.png"
                         alt="Obsidian Tile Wall"
                         width={64}
                         height={64}
@@ -253,7 +253,7 @@ export function blocksPage4() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/polished_obsidian.png"
+                        src="/assets/refined-obsidian/items/polished_obsidian.png"
                         alt="Polished Obsidian"
                         width={64}
                         height={64}
@@ -272,7 +272,7 @@ export function blocksPage4() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/polished_obsidian_slab.png"
+                        src="/assets/refined-obsidian/items/polished_obsidian_slab.png"
                         alt="Polished Obsidian Slab"
                         width={64}
                         height={64}
@@ -291,7 +291,7 @@ export function blocksPage4() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/polished_obsidian_stairs.png"
+                        src="/assets/refined-obsidian/items/polished_obsidian_stairs.png"
                         alt="Polished Obsidian Stairs"
                         width={64}
                         height={64}
@@ -310,7 +310,7 @@ export function blocksPage4() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/polished_obsidian_wall.png"
+                        src="/assets/refined-obsidian/items/polished_obsidian_wall.png"
                         alt="Polished Obsidian Wall"
                         width={64}
                         height={64}
@@ -336,7 +336,7 @@ export function blocksPage5() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/cracked_obsidian_bricks.png"
+                        src="/assets/refined-obsidian/items/cracked_obsidian_bricks.png"
                         alt="Cracked Obsidian Bricks"
                         width={64}
                         height={64}
@@ -354,7 +354,7 @@ export function blocksPage5() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/cracked_obsidian_tiles.png"
+                        src="/assets/refined-obsidian/items/cracked_obsidian_tiles.png"
                         alt="Cracked Obsidian Tiles"
                         width={64}
                         height={64}
@@ -372,7 +372,7 @@ export function blocksPage5() {
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
-                        src="/assets/refinedobsidian/items/chiseled_obsidian.png"
+                        src="/assets/refined-obsidian/items/chiseled_obsidian.png"
                         alt="Chiseled Obsidian"
                         width={64}
                         height={64}

@@ -18,8 +18,11 @@ import {Button} from "@/components/ui/button"
 import {Separator} from "@/components/ui/separator"
 import {LINKS} from "@/app/links";
 import {Music2} from "lucide-react";
+import {useTheme} from "next-themes";
 
 export default function Footer() {
+    const {theme} = useTheme()
+
     return (
         <footer id="support" className="bg-card border-t border-border/50 pt-20 pb-8">
             <div className="container mx-auto px-8">
@@ -44,46 +47,50 @@ export default function Footer() {
                             <span className="font-bold text-2xl">Soncresity Industries</span>
                         </div>
                         <p className="text-foreground/70 mb-6 leading-relaxed">
-                            SI Description
+                            Creators of immersive worlds, game mechanics, and stories tailored for Minecraft players and server communities worldwide
                         </p>
                         <div className="flex gap-3">
-                            <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
+                            <Button size="icon" variant="ghost" className="rounded-full hover-glow" asChild>
                                 <a href={`${LINKS.github_org}`} target="_blank" rel="noopener noreferrer"
                                    aria-label="GitHub">
                                     <Github size={20}/>
                                 </a>
                             </Button>
-                            <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
+                            <Button size="icon" variant="ghost" className="rounded-full hover-glow" asChild>
                                 <a href={`${LINKS.youtube_channel}`} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                                     <Youtube size={20}/>
                                 </a>
                             </Button>
-                            <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
+                            <Button size="icon" variant="ghost" className="rounded-full hover-glow" asChild>
                                 <a href={`${LINKS.tiktok}`} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                                     <Music2 size={20}/>
                                 </a>
                             </Button>
-                            <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
+                            <Button size="icon" variant="ghost" className="rounded-full hover-glow" asChild>
                                 <a href={`${LINKS.twitch}`} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                                     <Twitch size={20}/>
                                 </a>
                             </Button>
-                            <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
+                            <Button size="icon" variant="ghost" className="rounded-full hover-glow" asChild>
                                 <a href={`${LINKS.instagram}`} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                                     <Instagram size={20}/>
                                 </a>
                             </Button>
-                            <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
+                            <Button size="icon" variant="ghost" className="rounded-full hover-glow" asChild>
                                 <a href={`${LINKS.curseforge_profile}`} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                                    <Instagram size={20}/>
+                                    <img src="/assets/curseforge.svg" alt="CurseForge"
+                                         width={20} height={20}
+                                         className={`${theme === 'dark' ? 'invert' : ''}`}/>
                                 </a>
                             </Button>
-                            <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
+                            <Button size="icon" variant="ghost" className="rounded-full hover-glow" asChild>
                                 <a href={`${LINKS.modrinth_org}`} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                                    <Instagram size={20}/>
+                                    <img src="/assets/modrinth.png" alt="Modrinth"
+                                         width={20} height={20}
+                                         className="h-5 w-5"/>
                                 </a>
                             </Button>
-                            <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
+                            <Button size="icon" variant="ghost" className="rounded-full hover-glow" asChild>
                                 <a href="mailto:SoncresityIndustries@outlook.com" aria-label="Email">
                                     <Mail size={20}/>
                                 </a>

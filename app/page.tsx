@@ -2,7 +2,16 @@
 
 import {useState, useEffect, useRef} from "react"
 import {motion, useAnimation, useScroll} from "framer-motion"
-import {ArrowDown, Code, Server, Package, ArrowRight, Github, ExternalLink, MessageSquare} from "lucide-react"
+import {
+    ArrowDown,
+    Code,
+    Server,
+    Package,
+    ArrowRight,
+    Github,
+    ExternalLink,
+    MessageSquare, Globe
+} from "lucide-react"
 import {Button} from "@/components/ui/button"
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card"
 import {Badge} from "@/components/ui/badge"
@@ -80,6 +89,11 @@ export default function Home() {
             title: "Server Plugins",
             description: "Plugins",
         },
+        {
+            icon: <Globe className="h-6 w-6 text-primary"/>,
+            title: "Minecraft Worlds",
+            description: "Minecraft Worlds",
+        },
     ]
 
     return (
@@ -106,7 +120,7 @@ export default function Home() {
                             </h1>
 
                             <p className="text-lg text-foreground/80 max-w-lg">
-                                Soncresity Industries oajuhsdöuoHASDDIOfjäeo
+                                Creators of immersive worlds, game mechanics, and stories tailored for Minecraft players and server communities worldwide
                             </p>
 
                             <div className="flex flex-wrap gap-4 mt-4">
@@ -184,18 +198,9 @@ export default function Home() {
                         >
                             About <span className="text-primary">Soncresity Industries</span>
                         </motion.h2>
-                        <motion.p
-                            className="text-lg text-foreground/80"
-                            initial={{opacity: 0, y: 20}}
-                            whileInView={{opacity: 1, y: 0}}
-                            viewport={{once: true}}
-                            transition={{duration: 0.5, delay: 0.1}}
-                        >
-                            Longer Description
-                        </motion.p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {features.map((feature, index) => (
                             <motion.div
                                 key={index}
@@ -340,7 +345,7 @@ export default function Home() {
                                                                rel="noopener noreferrer">
                                                                 <img src="/assets/github.svg" alt="GitHub" width={20}
                                                                      height={20}
-                                                                     className={`${theme === 'light' ? 'invert' : ''} h-5 w-5`}/>
+                                                                     className={`${theme === 'dark' ? 'invert' : ''} h-5 w-5`}/>
                                                                 <span className="sr-only">GitHub</span>
                                                             </a>
                                                         </Button>
@@ -349,7 +354,7 @@ export default function Home() {
                                                                rel="noopener noreferrer">
                                                                 <img src="/assets/curseforge.svg" alt="CurseForge"
                                                                      width={20} height={20}
-                                                                     className={`${theme === 'light' ? 'invert' : ''} h-5 w-5`}/>
+                                                                     className={`${theme === 'dark' ? 'invert' : ''} h-5 w-5`}/>
                                                                 <span className="sr-only">CurseForge</span>
                                                             </a>
                                                         </Button>

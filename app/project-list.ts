@@ -4,10 +4,10 @@ import {LINKS} from "@/app/links";
 export const projects = [
     {
         id: 1,
-        title: "RefinedObsidian",
-        description: "A Minecraft Mod by EmberForge Development that adds various obsidian-themed items, blocks and armor trims.",
-        wikiid: "refinedobsidian",
-        image: "/assets/refinedobsidian/gallery-1.jpg?height=300&width=500",
+        title: "Refined Obsidian",
+        description: "A Minecraft Mod by Soncresity Industries that adds various obsidian-themed items, blocks and armor trims.",
+        wikiid: "refined-obsidian",
+        image: "/assets/refined-obsidian/gallery-1.jpg?height=300&width=500",
         category: "Mod",
         tags: ["Building", "Armor Trims"],
         //downloads: "",
@@ -16,5 +16,20 @@ export const projects = [
             modrinth: LINKS.ro_modrinth_project,
             curseforge: LINKS.ro_curseforge_project,
         }
-    }
+    },
+    {
+        id: 2,
+        title: "DeathBolt",
+        description: "A Minecraft Mod by Soncresity Industries that spawns configurable Lightning Bolts upon a player's death.",
+        wikiid: "deathbolt",
+        image: "/assets/placeholder.png?height=300&width=500",
+        category: "Mod",
+        tags: ["Customisation", "Multiplayer"],
+        //downloads: "",
+        links: {
+            github: LINKS.db_github_repo,
+            modrinth: LINKS.db_modrinth_project,
+            curseforge: LINKS.db_curseforge_project,
+        }
+    },
 ]

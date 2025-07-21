@@ -1,6 +1,5 @@
 "use client"
 
-import "@/app/styles/ro.css"
 import {useState} from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -14,7 +13,7 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 import {useTheme} from "next-themes"
 import {useToast} from "@/hooks/use-toast"
 import {LINKS} from "@/app/links"
-import {Footer} from "@/app/wiki/refinedobsidian/ro-footer"
+import {Footer} from "@/app/wiki/refined-obsidian/ro-footer"
 
 // Define version data with more metadata
 const versions = {
@@ -96,7 +95,7 @@ export default function RODownloadsPage() {
     const handleDownload = (loader: string, version: string, mcVersion: string, downloadUrl: string) => {
         toast({
             title: "Download Started",
-            description: `Downloading RefinedObsidian ${version} for ${loader} (MC ${mcVersion})`,
+            description: `Downloading Refined Obsidian ${version} for ${loader} (MC ${mcVersion})`,
             duration: 3000,
         })
 
@@ -116,17 +115,17 @@ export default function RODownloadsPage() {
                 className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur theme-transition">
                 <div className="container flex h-16 items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <Image src="/assets/refinedobsidian/ro-icon.png" alt="RefinedObsidian Icon" width={24} height={24}
+                        <Image src="/assets/refined-obsidian/ro-icon.png" alt="Refined Obsidian Icon" width={24} height={24}
                                className="animate-pulse-glow"/>
-                        <span className="text-xl font-bold text-primary">RefinedObsidian</span>
+                        <span className="text-xl font-bold text-primary">Refined Obsidian</span>
                     </div>
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="/wiki/refinedobsidian" className="text-sm font-medium ro-hover-lift relative group">
+                        <Link href="/wiki/refinedo-bsidian" className="text-sm font-medium ro-hover-lift relative group">
                             Wiki
                             <span
                                 className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                         </Link>
-                        <Link href="/downloads/refinedobsidian" className="text-sm font-medium ro-hover-lift relative group">
+                        <Link href="/downloads/refined-obsidian" className="text-sm font-medium ro-hover-lift relative group">
                             Downloads
                             <span
                                 className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-100 transition-transform"></span>
@@ -144,7 +143,7 @@ export default function RODownloadsPage() {
 
             <main className="container py-12">
                 <div className="text-center mb-12">
-                    <h1 className="text-3xl md:text-5xl font-bold text-primary">Download RefinedObsidian</h1>
+                    <h1 className="text-3xl md:text-5xl font-bold text-primary">Download Refined Obsidian</h1>
                     <p className="text-xl text-muted-foreground max-wxl mx-auto">Choose your preferred platform and
                         download the latest version</p>
                 </div>
@@ -203,7 +202,7 @@ export default function RODownloadsPage() {
                                                         <Badge variant="outline"
                                                                className="ml-2 text-xs">{loaderVersions.length} versions</Badge>
                                                     </CardTitle>
-                                                    <CardDescription>RefinedObsidian for {loader}</CardDescription>
+                                                    <CardDescription>Refined Obsidian for {loader}</CardDescription>
                                                 </div>
                                                 <TooltipProvider>
                                                     <Tooltip content={undefined}>
@@ -303,7 +302,7 @@ export default function RODownloadsPage() {
                             <CardContent className="flex flex-col items-center justify-center p-8 h-full">
                                 <div className="relative mb-4">
                                     <Image src="/assets/curseforge.svg" alt="CurseForge" width={64} height={64}
-                                           className={`transition-transform group-hover:scale-110 ${theme === 'light' ? 'invert' : ''}`}/>
+                                           className={`transition-transform group-hover:scale-110 ${theme === 'dark' ? 'invert' : ''}`}/>
                                     <div className="absolute -bottom-2 -right-2">
                                         <Badge variant="secondary" className="text-xs"><Check
                                             className="h-3 w-3 mr-1"/> Official</Badge>

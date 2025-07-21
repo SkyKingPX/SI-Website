@@ -14,19 +14,18 @@ import {
     Flame,
     Scissors, Download,
 } from "lucide-react"
-import {Footer} from "@/app/wiki/refinedobsidian/ro-footer"
+import {Footer} from "@/app/wiki/refined-obsidian/ro-footer"
 import {useTheme} from "next-themes"
 import {useEffect, useState} from "react"
 import {LINKS} from "@/app/links"
-import {recipes} from "@/app/wiki/refinedobsidian/ro-recipes"
+import {recipes} from "@/app/wiki/refined-obsidian/ro-recipes"
 import {Button} from "@/components/ui/button"
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card"
 import {Separator} from "@/components/ui/separator"
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
 import {ThemeToggle} from "@/components/theme-toggle"
-import {CommunityCredits} from "@/app/wiki/refinedobsidian/ro-community-credits"
-import {trimsPage1, trimsPage2, trimsPage3, trimsPage4} from "@/app/wiki/refinedobsidian/ro-trims-pages"
-import {blocksPage1, blocksPage2, blocksPage3, blocksPage4, blocksPage5} from "@/app/wiki/refinedobsidian/ro-blocks-pages"
+import {trimsPage1, trimsPage2, trimsPage3, trimsPage4} from "@/app/wiki/refined-obsidian/ro-trims-pages"
+import {blocksPage1, blocksPage2, blocksPage3, blocksPage4, blocksPage5} from "@/app/wiki/refined-obsidian/ro-blocks-pages"
 
 export default function ROWikiPage() {
     const {theme} = useTheme()
@@ -82,29 +81,29 @@ export default function ROWikiPage() {
         <div className="min-h-screen theme-transition">
             {/* Header */}
             <Head>
-                <title>RefinedObsidian Wiki</title>
-                <meta name="description" content="The official Wiki for the RefinedObsidian Mod by EmberForge Development" />
+                <title>Refined Obsidian Wiki</title>
+                <meta name="description" content="The official Wiki for the Refined Obsidian Mod by EmberForge Development" />
             </Head>
             <header
                 className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur theme-transition">
                 <div className="container flex h-16 items-center justify-between">
                     <div className="flex items-center gap-2">
                         <Image
-                            src="/assets/refinedobsidian/ro-icon.png"
-                            alt="RefinedObsidian Icon"
+                            src="/assets/refined-obsidian/ro-icon.png"
+                            alt="Refined Obsidian Icon"
                             width={24}
                             height={24}
                             className="animate-pulse-glow"
                         />
-                        <span className="text-xl font-bold text-primary">RefinedObsidian</span>
+                        <span className="text-xl font-bold text-primary">Refined Obsidian</span>
                     </div>
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="/wiki/refinedobsidian" className="text-sm font-medium hover-lift relative group">
+                        <Link href="/wiki/refined-obsidian" className="text-sm font-medium hover-lift relative group">
                             Wiki
                             <span
                                 className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-100 transition-transform"></span>
                         </Link>
-                        <Link href="/downloads/refinedobsidian" className="text-sm font-medium hover-lift relative group">
+                        <Link href="/downloads/refined-obsidian" className="text-sm font-medium hover-lift relative group">
                             Downloads
                             <span
                                 className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform"></span>
@@ -170,15 +169,12 @@ export default function ROWikiPage() {
                             </div>
                             <Separator className="bg-border/50"/>
 
-                            {/* Community Credits */}
-                            <CommunityCredits/>
-
                             {/* Animated sidebar element */}
                             <div className="mt-8 rounded-lg border border-border/50 bg-card p-4 hover-glow">
                                 <div className="flex justify-center mb-3">
                                     <Image
-                                        src="/assets/refinedobsidian/ro-icon.png"
-                                        alt="RefinedObsidian Icon"
+                                        src="/assets/refined-obsidian/ro-icon.png"
+                                        alt="Refined Obsidian Icon"
                                         width={48}
                                         height={48}
                                         className="animate-pulse-glow"
@@ -188,7 +184,7 @@ export default function ROWikiPage() {
                                 <p className="mt-2 text-xs text-muted-foreground text-center">
                                     Get help, share your creations, and connect with the community
                                 </p>
-                                <a href="https://discord.gg/3ENgHTEcmT" target="_blank" rel="noopener noreferrer">
+                                <a href={`${LINKS.discord}`} target="_blank" rel="noopener noreferrer">
                                     <Button size="sm"
                                             className="w-full mt-3 bg-primary/90 hover:bg-primary transition-colors">
                                         Join Now
@@ -209,21 +205,21 @@ export default function ROWikiPage() {
                         <div className="relative p-6 md:p-8 lg:p-10">
                             <div className="flex flex-col items-center text-center">
                                 <Image
-                                    src="/assets/refinedobsidian/ro-icon.png"
-                                    alt="RefinedObsidian Icon"
+                                    src="/assets/refined-obsidian/ro-icon.png"
+                                    alt="Refined-Obsidian Icon"
                                     width={96}
                                     height={96}
                                     className="mb-4 animate-pulse-glow"
                                 />
                                 <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary">
-                                    RefinedObsidian Wiki
+                                    Refined Obsidian Wiki
                                 </h1>
                                 <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
                                     A Minecraft Mod by EmberForge Development that adds various obsidian-themed items,
                                     blocks and armor trims.
                                 </p>
                                 <div className="mt-6 flex flex-wrap justify-center gap-4">
-                                    <Link href="/downloads/refinedobsidian">
+                                    <Link href="/downloads/refined-obsidian">
                                         <Button
                                             className="bg-primary hover:bg-primary/80 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg hover:shadow-primary/20">
                                             Download Mod
@@ -267,7 +263,7 @@ export default function ROWikiPage() {
                                         <div
                                             className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                                             <Image
-                                                src="/assets/refinedobsidian/items/obsidian_dust.png"
+                                                src="/assets/refined-obsidian/items/obsidian_dust.png"
                                                 alt="Obsidian Dust"
                                                 width={64}
                                                 height={64}
@@ -336,7 +332,7 @@ export default function ROWikiPage() {
                                         className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
                                         <div className="w-6 h-6 mr-2">
-                                            <img src="/assets/refinedobsidian/crafting.png" alt="Crafting Table" className="w-full h-full object-contain" />
+                                            <img src="/assets/refined-obsidian/crafting.png" alt="Crafting Table" className="w-full h-full object-contain" />
                                         </div>
                                         Crafting Table
                                     </TabsTrigger>
@@ -345,7 +341,7 @@ export default function ROWikiPage() {
                                         className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
                                         <div className="w-6 h-6 mr-2">
-                                            <img src="/assets/refinedobsidian/stonecutting.png" alt="Stonecutter" className="w-full h-full object-contain" />
+                                            <img src="/assets/refined-obsidian/stonecutting.png" alt="Stonecutter" className="w-full h-full object-contain" />
                                         </div>
                                         Stone Cutter
                                     </TabsTrigger>
@@ -354,7 +350,7 @@ export default function ROWikiPage() {
                                         className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
                                         <div className="w-6 h-6 mr-2">
-                                            <img src="/assets/refinedobsidian/smelting.png" alt="Furnace" className="w-full h-full object-contain" />
+                                            <img src="/assets/refined-obsidian/smelting.png" alt="Furnace" className="w-full h-full object-contain" />
                                         </div>
                                         Smelting
                                     </TabsTrigger>
@@ -363,7 +359,7 @@ export default function ROWikiPage() {
                                         className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
                                         <div className="w-6 h-6 mr-2">
-                                            <img src="/assets/refinedobsidian/blasting.png" alt="Blast Furnace" className="w-full h-full object-contain" />
+                                            <img src="/assets/refined-obsidian/blasting.png" alt="Blast Furnace" className="w-full h-full object-contain" />
                                         </div>
                                         Blasting
                                     </TabsTrigger>
@@ -400,7 +396,7 @@ export default function ROWikiPage() {
                                                         {ingredient && (
                                                             <div className="flex items-center justify-center">
                                                                 <img
-                                                                    src={`/assets/refinedobsidian/items/${ingredient.name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                                    src={`/assets/refined-obsidian/items/${ingredient.name.toLowerCase().replace(/\s+/g, "_")}.png`}
                                                                     alt={ingredient.name}
                                                                     className="max-w-full max-h-full object-contain"
                                                                 />
@@ -417,7 +413,7 @@ export default function ROWikiPage() {
                                                 <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
                                                     <div className="flex items-center justify-center">
                                                         <img
-                                                            src={`/assets/refinedobsidian/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                            src={`/assets/refined-obsidian/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
                                                             alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
                                                             className="max-w-full max-h-full object-contain"
                                                         />
@@ -436,7 +432,7 @@ export default function ROWikiPage() {
                                                 <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
                                                     <div className="flex items-center justify-center">
                                                         <img
-                                                            src={`/assets/refinedobsidian/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                            src={`/assets/refined-obsidian/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
                                                             alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
                                                             className="max-w-full max-h-full object-contain"
                                                         />
@@ -453,7 +449,7 @@ export default function ROWikiPage() {
                                                 <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
                                                     <div className="flex items-center justify-center">
                                                         <img
-                                                            src={`/assets/refinedobsidian/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                            src={`/assets/refined-obsidian/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
                                                             alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
                                                             className="max-w-full max-h-full object-contain"
                                                         />
@@ -472,7 +468,7 @@ export default function ROWikiPage() {
                                             <div className="rounded border border-border/50 bg-card/80 p-2 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-md hover:shadow-primary/20 theme-transition aspect-square w-[100px] md:w-[120px]">
                                                 <div className="flex items-center justify-center">
                                                     <img
-                                                        src={`/assets/refinedobsidian/items/${filteredRecipes[currentRecipeIndex].result.name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                        src={`/assets/refined-obsidian/items/${filteredRecipes[currentRecipeIndex].result.name.toLowerCase().replace(/\s+/g, "_")}.png`}
                                                         alt={filteredRecipes[currentRecipeIndex].result.name}
                                                         className="max-w-full max-h-full object-contain"
                                                     />
@@ -502,8 +498,8 @@ export default function ROWikiPage() {
                             <div
                                 className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                                 <Image
-                                    src="/assets/refinedobsidian/gallery-1.jpg"
-                                    alt="RefinedObsidian Overview"
+                                    src="/assets/refined-obsidian/gallery-1.jpg"
+                                    alt="Refined Obsidian Overview"
                                     width={500}
                                     height={300}
                                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -512,7 +508,7 @@ export default function ROWikiPage() {
                             <div
                                 className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                                 <Image
-                                    src="/assets/refinedobsidian/gallery-2.jpg"
+                                    src="/assets/refined-obsidian/gallery-2.jpg"
                                     alt="Block Palette"
                                     width={500}
                                     height={300}
@@ -522,7 +518,7 @@ export default function ROWikiPage() {
                             <div
                                 className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                                 <Image
-                                    src="/assets/refinedobsidian/gallery-3.jpg"
+                                    src="/assets/refined-obsidian/gallery-3.jpg"
                                     alt="Building"
                                     width={500}
                                     height={300}
@@ -588,13 +584,13 @@ export default function ROWikiPage() {
                         <div className="rounded-lg border border-border/50 bg-card p-6 hover-glow theme-transition">
                             <div className="flex flex-col items-center gap-4 text-center md:flex-row md:text-left">
                                 <div className="flex-1 space-y-2">
-                                    <h3 className="text-xl font-bold text-primary">Get RefinedObsidian</h3>
+                                    <h3 className="text-xl font-bold text-primary">Get Refined Obsidian</h3>
                                     <p className="text-muted-foreground">
-                                        Download the latest version of RefinedObsidian for your Minecraft version.
+                                        Download the latest version of Refined Obsidian for your Minecraft version.
                                     </p>
                                 </div>
                                 <div className="flex gap-4">
-                                    <Link href="/downloads/refinedobsidian">
+                                    <Link href="/downloads/refined-obsidian">
                                         <Button
                                             variant="outline"
                                             className="border-primary text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
@@ -645,7 +641,7 @@ export default function ROWikiPage() {
                                             className="text-sm text-primary hover:underline flex items-center gap-1"
                                         >
                                             <Image src="/assets/curseforge.svg" alt="CurseForge" width={16} height={16}
-                                                   className={`${theme === 'light' ? 'invert' : ''}`}/>
+                                                   className={`${theme === 'dark' ? 'invert' : ''}`}/>
                                             CurseForge
                                         </a>
                                     </div>

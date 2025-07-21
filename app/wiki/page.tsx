@@ -18,10 +18,10 @@ export default function WikiPage() {
     {
       title: "Refined Obsidian",
       description: "Complete guide for the Refined Obsidian mod including blocks, items, recipes, and armor trims.",
-      href: "/wiki/refinedobsidian",
+      href: "/wiki/refined-obsidian",
       status: "Complete",
       category: "Minecraft Mod",
-      icon: "/assets/refinedobsidian/ro-icon.png",
+      icon: "/assets/refined-obsidian/ro-icon.png",
       features: ["Block Variants", "Recipes", "Armor Trims"],
     },
     // Future wikis can be added here
