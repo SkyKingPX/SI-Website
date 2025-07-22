@@ -21,12 +21,12 @@ import {Button} from "@/components/ui/button"
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card"
 import {Badge} from "@/components/ui/badge"
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
-import Header from "@/app/header"
-import Team from "@/app/team"
-import Footer from "@/app/footer"
-import {LINKS} from "@/app/links";
+import Header from "@/components/blocks/header"
+import Team from "@/components/blocks/team"
+import Footer from "@/components/blocks/footer"
+import {LINKS} from "@/components/blocks/links";
 import {useTheme} from "next-themes";
-import {projects} from "./project-list"
+import {projects} from "@/components/blocks/project-list"
 
 export default function Home() {
 

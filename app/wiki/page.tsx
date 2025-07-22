@@ -5,8 +5,8 @@ import Link from "next/link"
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
 import {Badge} from "@/components/ui/badge"
 import {BookOpen, ExternalLink} from "lucide-react"
-import Header from "@/app/header"
-import Footer from "@/app/footer"
+import Header from "@/components/blocks/header"
+import Footer from "@/components/blocks/footer"
 import {useScroll} from "framer-motion"
 
 export default function WikiPage() {

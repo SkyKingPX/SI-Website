@@ -1,5 +1,5 @@
 
-import {LINKS} from "@/app/links";
+import {LINKS} from "@/components/blocks/links";
 
 export const projects = [
     {

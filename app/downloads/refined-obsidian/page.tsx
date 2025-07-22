@@ -12,7 +12,7 @@ import {Badge} from "@/components/ui/badge"
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip"
 import {useTheme} from "next-themes"
 import {useToast} from "@/hooks/use-toast"
-import {LINKS} from "@/app/links"
+import {LINKS} from "@/components/blocks/links"
 import {Footer} from "@/app/wiki/refined-obsidian/ro-footer"
 
 // Define version data with more metadata

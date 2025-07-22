@@ -7,11 +7,11 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {ArrowRight} from "lucide-react";
 import {useEffect, useRef, useState} from "react"
-import {projects} from "../project-list";
+import {projects} from "@/components/blocks/project-list";
 import {useTheme} from "next-themes";
 
-import Header from "@/app/header"
-import Footer from "@/app/footer"
+import Header from "@/components/blocks/header"
+import Footer from "@/components/blocks/footer"
 
 export default function Projects() {
     const {theme} = useTheme()

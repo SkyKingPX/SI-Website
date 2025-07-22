@@ -1,7 +1,7 @@
 import Image from "next/image"
 import {Button} from "@/components/ui/button"
 import {useTheme} from "next-themes"
-import { LINKS } from "@/app/links"
+import { LINKS } from "@/components/blocks/links"
 
 export function Footer() {
     const {theme} = useTheme()

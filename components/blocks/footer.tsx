@@ -16,7 +16,7 @@ import {
 } from "lucide-react"
 import {Button} from "@/components/ui/button"
 import {Separator} from "@/components/ui/separator"
-import {LINKS} from "@/app/links";
+import {LINKS} from "@/components/blocks/links";
 import {Music2} from "lucide-react";
 import {useTheme} from "next-themes";
 

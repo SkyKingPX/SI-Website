@@ -17,7 +17,7 @@ import {
 import {Footer} from "@/app/wiki/refined-obsidian/ro-footer"
 import {useTheme} from "next-themes"
 import {useEffect, useState} from "react"
-import {LINKS} from "@/app/links"
+import {LINKS} from "@/components/blocks/links"
 import {recipes} from "@/app/wiki/refined-obsidian/ro-recipes"
 import {Button} from "@/components/ui/button"
 import {Card, CardContent, CardFooter} from "@/components/ui/card"

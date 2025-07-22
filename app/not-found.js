@@ -6,8 +6,8 @@ import {ArrowLeft, Home} from 'lucide-react'
 import {motion, useScroll} from 'framer-motion'
 import {Button} from '@/components/ui/button'
 import {useTheme} from "next-themes";
-import Header from '@/app/header'
-import Footer from '@/app/footer'
+import Header from '@/components/blocks/header'
+import Footer from '@/components/blocks/footer'
 
 export default function NotFound() {
     const [mounted, setMounted] = useState(false)
@@ -32,12 +32,11 @@ export default function NotFound() {
     }
 
     return (
-        <div className="min-h-screen flex flex-col">
+        <div className="flex flex-col overflow-x-hidden">
+            <Header scrollProgress={scrollYProgress}/>
 
-            <main className="flex-grow flex items-center justify-center p-6 relative pt-16 overflow-hidden">
-                <Header scrollProgress={scrollYProgress}/>
-
-                <div className="max-w-md w-full mx-auto pt-18 mt-8 text-center">
+            <main className="flex-grow flex items-center justify-center min-h-screen">
+                <div className="max-w-md w-full mx-auto text-center">
                     <motion.div
                         initial={{scale: 0.8, opacity: 0}}
                         animate={{scale: 4, opacity: 1}}
