@@ -80,7 +80,7 @@ export default function Footer() {
                                 <a href={`${LINKS.curseforge_profile}`} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                                     <img src="/assets/curseforge.svg" alt="CurseForge"
                                          width={20} height={20}
-                                         className={`${theme === 'dark' ? 'invert' : ''}`}/>
+                                         className="invert-on-dark"/>
                                 </a>
                             </Button>
                             <Button size="icon" variant="ghost" className="rounded-full hover-glow" asChild>

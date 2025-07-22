@@ -148,7 +148,7 @@ export default function Projects() {
                                                                rel="noopener noreferrer">
                                                                 <img src="/assets/github.svg" alt="GitHub" width={20}
                                                                      height={20}
-                                                                     className={`${theme === 'dark' ? 'invert' : ''} h-5 w-5`}/>
+                                                                     className="invert-on-dark h-5 w-5"/>
                                                                 <span className="sr-only">GitHub</span>
                                                             </a>
                                                         </Button>
@@ -157,7 +157,7 @@ export default function Projects() {
                                                                rel="noopener noreferrer">
                                                                 <img src="/assets/curseforge.svg" alt="CurseForge"
                                                                      width={20} height={20}
-                                                                     className={`${theme === 'dark' ? 'invert' : ''} h-5 w-5`}/>
+                                                                     className="invert-on-dark h-5 w-5"/>
                                                                 <span className="sr-only">CurseForge</span>
                                                             </a>
                                                         </Button>

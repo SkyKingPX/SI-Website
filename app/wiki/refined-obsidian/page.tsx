@@ -644,7 +644,7 @@ export default function ROWikiPage() {
                                             className="text-sm text-primary hover:underline flex items-center gap-1"
                                         >
                                             <Image src="/assets/curseforge.svg" alt="CurseForge" width={16} height={16}
-                                                   className={`${theme === 'dark' ? 'invert' : ''}`}/>
+                                                   className="invert-on-dark"/>
                                             CurseForge
                                         </a>
                                     </div>

@@ -58,6 +58,11 @@ body {
   }
 }
 
+.invert-on-dark {
+  @apply dark:invert;
+}
+
+
 @layer base {
   * {
     @apply border-border;

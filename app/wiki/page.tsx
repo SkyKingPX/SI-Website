@@ -10,42 +10,53 @@ import Footer from "@/app/footer"
 import {useScroll} from "framer-motion"
 
 export default function WikiPage() {
-    
-    const {scrollYProgress} = useScroll()
+
+  const {scrollYProgress} = useScroll()
 
   const wikis = [
     {
-      title: "Refined Obsidian",
-      description: "Complete guide for the Refined Obsidian mod including blocks, items, recipes, and armor trims.",
+      title: "SI: Refined Obsidian",
+      description: "Complete guide for the SI: Refined Obsidian Mod including blocks, items, recipes, and armor trims.",
       href: "/wiki/refined-obsidian",
       status: "Complete",
       category: "Minecraft Mod",
       icon: "/assets/refined-obsidian/ro-icon.png",
       features: ["Block Variants", "Recipes", "Armor Trims"],
+      loaders: ["Fabric", "Forge", "NeoForge"]
+    },
+    {
+      title: "SI: DeathBolt",
+      description: "Complete guide for the SI: DeathBolt Mod including configuration and customisation.",
+      href: "/wiki/deathbolt",
+      status: "Complete",
+      category: "Minecraft Mod",
+      icon: "/assets/deathbolt/db-icon.png",
+      features: ["Customisation", "Multiplayer", "Serverside"],
+      loaders: ["Forge", "NeoForge"]
     },
     // Future wikis can be added here
   ]
 
   return (
     <main className="min-h-screen theme-transition">
-        <Header scrollProgress={scrollYProgress}/>
+      <Header scrollProgress={scrollYProgress}/>
       <Head>
         <title>EmberForge Wiki</title>
-        <meta name="description" content="All Wikis for the content developed by Soncresity Industries" />
+        <meta name="description" content="All Wikis for the content developed by Soncresity Industries"/>
       </Head>
       <div className="container mx-auto px-4 py-8">
         {/* Header Section */}
         <div className="container mx-auto px-4 py-12 md:py-24">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <BookOpen className="h-8 w-8 text-primary" />
-            <h1 className="text-4xl font-bold text-primary">Soncresity Wiki</h1>
+          <div className="text-center mb-12">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <BookOpen className="h-8 w-8 text-primary"/>
+              <h1 className="text-4xl font-bold text-primary">Soncresity Wiki</h1>
+            </div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive documentation and guides for all Soncresity Industries projects. Find detailed information
+              about our mods, features, and how to use them.
+            </p>
           </div>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive documentation and guides for all Soncresity Industries projects. Find detailed information
-            about our mods, features, and how to use them.
-          </p>
-        </div>
         </div>
 
         {/* Scroll Progress Bar */}
@@ -87,11 +98,23 @@ export default function WikiPage() {
 
                 {/* Features List */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-medium mb-2 text-foreground">Includes:</h4>
+                  <h4 className="text-sm font-medium mb-2 text-foreground">Features:</h4>
                   <div className="flex flex-wrap gap-1">
                     {wiki.features.map((feature, featureIndex) => (
                       <Badge key={featureIndex} variant="outline" className="text-xs">
                         {feature}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Loaders */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-medium mb-2 text-foreground">Loader:</h4>
+                  <div className="flex flex-wrap gap-1">
+                    {wiki.loaders && wiki.loaders.map((loader, index) => (
+                      <Badge key={index} variant="secondary" className="text-xs">
+                        {loader}
                       </Badge>
                     ))}
                   </div>
@@ -103,7 +126,8 @@ export default function WikiPage() {
                   className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/link"
                 >
                   View Wiki
-                  <ExternalLink className="h-4 w-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                  <ExternalLink
+                    className="h-4 w-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform"/>
                 </Link>
               </CardContent>
             </Card>

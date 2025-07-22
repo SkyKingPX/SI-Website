@@ -302,7 +302,7 @@ export default function RODownloadsPage() {
                             <CardContent className="flex flex-col items-center justify-center p-8 h-full">
                                 <div className="relative mb-4">
                                     <Image src="/assets/curseforge.svg" alt="CurseForge" width={64} height={64}
-                                           className={`transition-transform group-hover:scale-110 ${theme === 'dark' ? 'invert' : ''}`}/>
+                                           className="transition-transform group-hover:scale-110 invert-on-dark"/>
                                     <div className="absolute -bottom-2 -right-2">
                                         <Badge variant="secondary" className="text-xs"><Check
                                             className="h-3 w-3 mr-1"/> Official</Badge>

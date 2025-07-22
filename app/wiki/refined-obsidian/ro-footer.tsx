@@ -23,7 +23,7 @@ export function Footer() {
                         <Button variant="ghost" size="icon"
                                 className="text-muted-foreground hover:text-primary transition-colors hover-lift">
                             <Image src="/assets/github.svg" alt="GitHub" width={20} height={20}
-                                   className={`${theme === 'dark' ? 'invert' : ''}`}/>
+                                   className="invert-on-dark"/>
                             <span className="sr-only">GitHub</span>
                         </Button>
                     </a>
