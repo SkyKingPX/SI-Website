@@ -28,6 +28,22 @@ import {LINKS} from "@/components/blocks/links";
 import {useTheme} from "next-themes";
 import {projects} from "@/components/blocks/project-list"
 
+// export const metadata = {
+//   title: "Soncresity Industries",
+//   description: "The official Website of Soncresity Industries",
+//   openGraph: {
+//     title: "Soncresity Industries",
+//     description: "The official Website of Soncresity Industries",
+//     images: [
+//       {
+//         url: "https://soncresityindustries.vercel.app/assets/si-logo-transparent.png",
+//         width: 512,
+//         height: 512,
+//       },
+//     ],
+//   },
+// };
+
 export default function Home() {
 
   const sectionTopSpacing = "pt-16 mt-8"
