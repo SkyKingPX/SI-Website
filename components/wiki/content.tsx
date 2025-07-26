@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react"
 import { Skeleton } from "@/components/ui/skeleton"
 import { cn } from "@/lib/utils"
-
-// Note: This is a placeholder for the actual markdown rendering
-// In a real implementation, you would install and import a markdown library like:
-// import ReactMarkdown from 'react-markdown'
-// import rehypeHighlight from 'rehype-highlight'
-// import remarkGfm from 'remark-gfm'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import { ComponentProps } from 'react'
 
 interface WikiContentProps {
   content: string
@@ -16,11 +17,17 @@ interface WikiContentProps {
   isLoading?: boolean
 }
 
-export function WikiContent({ 
-  content, 
-  className, 
-  isLoading = false 
-}: WikiContentProps) {
+interface CodeProps extends ComponentProps<'code'> {
+  inline?: boolean
+  className?: string
+  children?: React.ReactNode
+}
+
+export function WikiContent({
+                              content,
+                              className,
+                              isLoading = false
+                            }: WikiContentProps) {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -41,50 +48,37 @@ export function WikiContent({
     )
   }
 
-  // This is a placeholder for the actual markdown rendering
-  // In a real implementation, you would use a markdown library
   return (
-    <div className={cn("prose prose-neutral dark:prose-invert max-w-none", className)}>
-      {/* 
-        In a real implementation with react-markdown, you would use:
-        <ReactMarkdown
-          rehypePlugins={[rehypeHighlight]}
-          remarkPlugins={[remarkGfm]}
-        >
-          {content}
-        </ReactMarkdown>
-      */}
-      <div dangerouslySetInnerHTML={{ __html: formatMarkdownPlaceholder(content) }} />
+    <div className={cn("prose prose-neutral dark:prose-invert max-w-none prose-pre:p-0", className)}>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw, rehypeSanitize]}
+        components={{
+          code({inline, className, children, ...props}: CodeProps) {
+            const match = /language-(\w+)/.exec(className || '')
+            return !inline && match ? (
+              <SyntaxHighlighter
+                style={tomorrow}
+                language={match[1]}
+                customStyle={{
+                  margin: 0,
+                  padding: '1rem',
+                  borderRadius: '0.375rem',
+                  background: '#1a1b26'
+                }}
+              >
+                {String(children).replace(/\n$/, '')}
+              </SyntaxHighlighter>
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            )
+          }
+        }}
+      >
+        {content}
+      </ReactMarkdown>
     </div>
   )
 }
-
-// This is a very basic placeholder function to simulate markdown rendering
-// In a real implementation, you would use a markdown library
-function formatMarkdownPlaceholder(markdown: string): string {
-  let html = markdown
-    // Headings
-    .replace(/^# (.*$)/gm, '<h1>$1</h1>')
-    .replace(/^## (.*$)/gm, '<h2>$1</h2>')
-    .replace(/^### (.*$)/gm, '<h3>$1</h3>')
-    // Bold text
-    .replace(/\*\*(.*)\*\*/gm, '<strong>$1</strong>')
-    // Italic text
-    .replace(/\*(.*)\*/gm, '<em>$1</em>')
-    // Code blocks
-    .replace(/```([\s\S]*?)```/gm, '<pre><code>$1</code></pre>')
-    // Inline code
-    .replace(/`([^`]+)`/gm, '<code>$1</code>')
-    // Links
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/gm, '<a href="$2">$1</a>')
-    // Lists
-    .replace(/^\- (.*$)/gm, '<li>$1</li>')
-    // Paragraphs
-    .replace(/^(?!<[a-z])(.*$)/gm, '<p>$1</p>')
-    // Clean up empty paragraphs
-    .replace(/<p><\/p>/gm, '')
-
-  return html
-}
-
-export default WikiContent

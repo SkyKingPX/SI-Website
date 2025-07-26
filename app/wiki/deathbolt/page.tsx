@@ -11,7 +11,15 @@ export const metadata: Metadata = {
 const wikiContent = `
 # SI: Deathbolt
 
-### This Wiki is still unnder construction, please check back later!
+### This Wiki is still under construction, please check back later!
+
+*Bottom Text*
+[Test](https://example.com)
+\`\`\`json
+{
+  "test": "test"
+}
+\`\`\`
 `
 
 // ## Support
