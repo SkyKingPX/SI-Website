@@ -4,6 +4,7 @@ export const LINKS = {
     tiktok: "https://www.tiktok.com/@soncresityindustries",
     twitch: "https://www.twitch.tv/kalarianyt",
     instagram: "https://www.instagram.com/soncresityindustries",
+    kinetic_affiliate: "https://billing.kinetichosting.net/aff.php?aff=1101"
 
     modrinth_org: "https://modrinth.com/organization/soncresityindustries",
     curseforge_profile: "https://www.curseforge.com/members/soncresityindustries/projects",

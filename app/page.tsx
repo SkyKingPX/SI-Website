@@ -898,7 +898,7 @@ export default function Home() {
                   <Button
                     className="bg-gradient-to-r from-[#5A4FCF] via-[#7868E6] to-[#A29BFE] hover:opacity-90 text-white hover-scale"
                     asChild>
-                    <a href="https://billing.kinetichosting.net/aff.php?aff=1075" target="_blank"
+                    <a href={`${LINKS.kinetic_affiliate}`} target="_blank"
                        rel="noopener noreferrer">
                       Get Started <ArrowRight className="ml-2 h-4 w-4"/>
                     </a>
