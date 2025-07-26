@@ -4,11 +4,11 @@ import { useState } from "react"
 import Link from "next/link"
 import { WikiContent } from "@/components/wiki/content"
 import { Button } from "@/components/ui/button"
-import { 
-  ChevronLeft, 
-  ChevronRight, 
-  Edit, 
-  Copy, 
+import {
+  ChevronLeft,
+  ChevronRight,
+  Edit,
+  Copy,
   Check,
   Share2,
   ArrowUp
@@ -87,13 +87,24 @@ export function WikiPageTemplate({
       {/*)}*/}
 
       {/* Title and Actions */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+      <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-4 mb-6 text-center sm:text-left">
+        {/* Image */}
         {titleImage && titleImage !== "#" && (
-          <img className="h-16 w-16" src={titleImage} alt="Title Image"/>
+          <img className="h-16 w-16" src={titleImage} alt="Title Image" />
         )}
-        <h1 className="text-3xl font-bold tracking-tight">{title}</h1>
-        <div className="flex items-center gap-2">
-          {/* Copy Button */}
+
+        {/* Title & Subtitle */}
+        <div className="sm:flex-1">
+          <h1 className="text-3xl font-bold tracking-tight">{title}</h1>
+          {lastUpdated && (
+            <div className="text-sm text-muted-foreground mt-1">
+              Last updated: {lastUpdated}
+            </div>
+          )}
+        </div>
+
+        {/* Buttons */}
+        <div className="flex gap-2 mt-2 sm:mt-0">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -111,7 +122,6 @@ export function WikiPageTemplate({
             </Tooltip>
           </TooltipProvider>
 
-          {/* Edit Button */}
           {editUrl && (
             <TooltipProvider>
               <Tooltip>
@@ -129,7 +139,6 @@ export function WikiPageTemplate({
             </TooltipProvider>
           )}
 
-          {/* Share Button */}
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -157,13 +166,6 @@ export function WikiPageTemplate({
           </TooltipProvider>
         </div>
       </div>
-
-      {/* Last Updated */}
-      {lastUpdated && (
-        <div className="text-sm text-muted-foreground mb-6">
-          Last updated: {lastUpdated}
-        </div>
-      )}
 
       {/* Content */}
       <WikiContent content={content} className="mb-10" />

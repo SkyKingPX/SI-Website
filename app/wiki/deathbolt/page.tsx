@@ -8,18 +8,8 @@ export const metadata: Metadata = {
 }
 
 // Sample markdown content for the wiki page
-const wikiContent = `
-# SI: Deathbolt
+const wikiContent = `---
 
-### This Wiki is still under construction, please check back later!
-
-*Bottom Text*
-[Test](https://example.com)
-\`\`\`json
-{
-  "test": "test"
-}
-\`\`\`
 `
 
 // ## Support
@@ -34,7 +24,7 @@ export default function DeathboltWikiPage() {
         title="SI: Deathbolt"
         titleImage="/assets/deathbolt/db-icon.png"
         content={wikiContent}
-        lastUpdated="July 25, 2025"
+        lastUpdated="July 26, 2025"
         breadcrumbs={[
           { title: "Deathbolt", href: "/wiki/deathbolt" }
         ]}
