@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, ReactNode } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { WikiContent } from "@/components/wiki/content"
 import { Button } from "@/components/ui/button"
@@ -21,7 +21,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 interface WikiPageTemplateProps {
   title: string
   titleImage: string
-  content: string | ReactNode
+  content: string
   lastUpdated?: string
   prevPage?: {
     title: string
@@ -60,13 +60,6 @@ export function WikiPageTemplate({
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
-  }
-
-  const renderContent = () => {
-    if (typeof content === 'string') {
-      return <WikiContent content={content} className="mb-10" />
-    }
-    return <div className="mb-10">{content}</div>
   }
 
   return (
@@ -175,14 +168,14 @@ export function WikiPageTemplate({
       </div>
 
       {/* Content */}
-      {renderContent()}
+      <WikiContent content={content} className="mb-10" />
 
       {/* Navigation and Footer */}
       <Separator className="my-6" />
 
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
         <div className="flex-1">
-          {prevPage && (
+          {prevPage !== "#" && prevPage && (
             <Link href={prevPage.href} className="inline-block">
               <Button variant="ghost" className="flex items-center gap-2 hover:bg-muted">
                 <ChevronLeft className="h-4 w-4" />
@@ -207,7 +200,7 @@ export function WikiPageTemplate({
         </div>
 
         <div className="flex-1 flex justify-end">
-          {nextPage && (
+          {nextPage !== "#" && nextPage && (
             <Link href={nextPage.href} className="inline-block">
               <Button variant="ghost" className="flex items-center gap-2 hover:bg-muted">
                 <span className="flex flex-col items-end">
