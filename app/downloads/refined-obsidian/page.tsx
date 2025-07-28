@@ -13,7 +13,7 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 import {useTheme} from "next-themes"
 import {useToast} from "@/hooks/use-toast"
 import {LINKS} from "@/components/blocks/links"
-import {Footer} from "@/app/wiki/refined-obsidian/ro-footer"
+import Footer from "@/components/blocks/footer"
 
 // Define version data with more metadata
 const versions = {
