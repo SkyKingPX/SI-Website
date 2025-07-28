@@ -24,7 +24,7 @@ export default function Footer() {
     const {theme} = useTheme()
 
     return (
-        <footer id="support" className="bg-card border-t border-border/50 pt-20 pb-8">
+        <footer className="bg-card border-t border-border/50 pt-10 pb-8">
             <div className="container mx-auto px-8">
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">

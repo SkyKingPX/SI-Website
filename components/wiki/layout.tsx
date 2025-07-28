@@ -184,8 +184,8 @@ export function WikiLayout({children}: WikiLayoutProps) {
     <div className="flex min-h-screen flex-col">
       <Header scrollProgress={scrollYProgress}/>
 
-      <div className="container mx-auto px-4 py-12 md:py-24">
-        <div className="flex-1 flex flex-col md:flex-row">
+      <div className="container mx-auto px-4 pt-12 md:pt-24 flex-1">
+        <div className="flex flex-col md:flex-row">
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden p-4 mt-2 border-b">
             <div className="flex items-center justify-between">
@@ -244,9 +244,9 @@ export function WikiLayout({children}: WikiLayoutProps) {
             </div>
           </main>
         </div>
-
-        <Footer/>
       </div>
+
+      <Footer/>
     </div>
   )
 }

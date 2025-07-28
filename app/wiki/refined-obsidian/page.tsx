@@ -14,7 +14,7 @@ import {
     Pickaxe,
     Scissors,
 } from "lucide-react"
-import {Footer} from "@/app/wiki/refined-obsidian/ro-footer"
+import Footer from "@/components/blocks/footer"
 import {useTheme} from "next-themes"
 import {useEffect, useState} from "react"
 import {LINKS} from "@/components/blocks/links"
@@ -171,29 +171,6 @@ export default function ROWikiPage() {
                                 </div>
                             </div>
                             <Separator className="bg-border/50"/>
-
-                            {/* Animated sidebar element */}
-                            <div className="mt-8 rounded-lg border border-border/50 bg-card p-4 hover-glow">
-                                <div className="flex justify-center mb-3">
-                                    <Image
-                                        src="/assets/refined-obsidian/ro-icon.png"
-                                        alt="Refined Obsidian Icon"
-                                        width={48}
-                                        height={48}
-                                        className="animate-pulse-glow"
-                                    />
-                                </div>
-                                <h3 className="text-center text-sm font-medium">Join our Discord</h3>
-                                <p className="mt-2 text-xs text-muted-foreground text-center">
-                                    Get help, share your creations, and connect with the community
-                                </p>
-                                <a href={`${LINKS.discord}`} target="_blank" rel="noopener noreferrer">
-                                    <Button size="sm"
-                                            className="w-full mt-3 bg-primary/90 hover:bg-primary transition-colors">
-                                        Join Now
-                                    </Button>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </aside>
@@ -529,56 +506,6 @@ export default function ROWikiPage() {
                                 />
                             </div>
                         </div>
-                    </section>
-
-                    {/* Compatibility */}
-                    <section id="compatibility" className="space-y-6">
-                        <h2 className="text-2xl font-bold tracking-tight text-primary">Compatibility</h2>
-                        <Card className="bg-card border-border/50 hover-scale theme-transition">
-                            <div className="h-6"></div>
-                            <CardContent className="space-y-6">
-                                <div>
-                                    <h3 className="text-lg font-medium text-primary mb-2">Supported Platforms</h3>
-                                    <ul className="grid gap-2 md:grid-cols-3">
-                                        <li className="flex items-center gap-2 group">
-                                            <ChevronRight
-                                                className="h-4 w-4 text-primary transition-transform duration-200 group-hover:translate-x-1"/>
-                                            <span>Fabric 1.20.1-1.21.4</span>
-                                        </li>
-                                        <li className="flex items-center gap-2 group">
-                                            <ChevronRight
-                                                className="h-4 w-4 text-primary transition-transform duration-200 group-hover:translate-x-1"/>
-                                            <span>Forge 1.20.1-1.21.4</span>
-                                        </li>
-                                        <li className="flex items-center gap-2 group">
-                                            <ChevronRight
-                                                className="h-4 w-4 text-primary transition-transform duration-200 group-hover:translate-x-1"/>
-                                            <span>NeoForge 1.20.4-1.21.4</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 className="text-lg font-medium text-primary mb-2">Compatible Mods</h3>
-                                    <div className="flex items-center gap-2 group">
-                                        <ChevronRight
-                                            className="h-4 w-4 text-primary transition-transform duration-200 group-hover:translate-x-1"/>
-                                        <span>Just Enough Items (JEI)</span>
-                                    </div>
-                                </div>
-                            </CardContent>
-                            <CardFooter>
-                                <p className="text-sm text-muted-foreground">
-                                    Available on{" "}
-                                    <a href={LINKS.ro_modrinth_project} className="text-primary hover:underline">
-                                        Modrinth
-                                    </a>{" "}
-                                    and{" "}
-                                    <a href={LINKS.ro_curseforge_project} className="text-primary hover:underline">
-                                        CurseForge
-                                    </a>
-                                </p>
-                            </CardFooter>
-                        </Card>
                     </section>
 
                     {/* Download */}

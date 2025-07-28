@@ -4,7 +4,7 @@ import WikiPageTemplate from "@/components/wiki/page-template"
 
 export const metadata: Metadata = {
   title: "SI: Deathbolt - Wiki",
-  description: "Information about Deathbolt - A death management mod for Minecraft",
+  description: "Information about Deathbolt by Soncresity Industries",
 }
 
 // Sample markdown content for the wiki page

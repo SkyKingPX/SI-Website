@@ -4,65 +4,33 @@ import WikiPageTemplate from "@/components/wiki/page-template"
 
 export const metadata: Metadata = {
   title: "MC Mod Template - Wiki",
-  description: "Information about the Minecraft Mod Template - A comprehensive guide",
+  description: "Information about the Minecraft Mod Template by Soncresity Industries",
 }
 
 // Sample markdown content for the wiki page
-const wikiContent = `
-# MC Mod Template (MCMT)
+const wikiContent = `---
+## Versions
+| MC Version | Fabric | Forge  | NeoForge |
+|:----------:|:------:|:------:|:--------:|
+| **1.21.8** | **/**  |  **/** |   **/**  |
+| **1.21.7** | **/**  |  **/** |   **/**  |
+| **1.21.6** |   ✅   |   ✅   |    ✅   |
+| **1.21.5** |   ✅   |   ✅   |    ✅   |
+| **1.21.4** |   ✅   |   ✅   |    ✅   |
+| **1.21.3** |   ✅   |   ❌   |    ✅   |
+| **1.21.2** |   ❌   |   ❌   |    ❌   |
+| **1.21.1** |   ✅   |   ✅   |    ✅   |
+|  **1.21**  |   ❌   |   ❌   |    ❌   |
+| **1.20.6** |   ✅   |   ❌   |    ✅   |
+| **1.20.5** |   ❌   |   ❌   |    ❌   |
+| **1.20.4** |   ✅   |   ✅   |    ✅   |
+| **1.20.3** |   ❌   |   ❌   |    ⚠️   |
+| **1.20.2** |   ❌   |   ❌   |    ⚠️   |
+| **1.20.1** |   ✅   |   ✅   |    ⚠️   |
+|  **1.20**  |   ❌   |   ❌   |    ⚠️   |
+| **Below**  |   ❌   |   ❌   |    ⚠️   |
 
-The Minecraft Mod Template (MCMT) is a comprehensive starting point for creating Minecraft mods. It provides a structured foundation with essential boilerplate code to help you get started quickly.
-
-## Features
-
-- **Multi-loader Support**: Works with Forge, Fabric, and NeoForge
-- **Gradle Setup**: Pre-configured build scripts
-- **CI/CD Integration**: GitHub Actions workflows for automated builds
-- **Code Structure**: Organized package structure following best practices
-- **Documentation**: Inline comments and examples
-
-## Getting Started
-
-To use the MC Mod Template, follow these steps:
-
-1. Clone the repository
-2. Run the setup script
-3. Configure your mod details
-4. Start developing!
-
-\`\`\`
-git clone https://github.com/soncresity/mc-mod-template.git
-cd mc-mod-template
-./gradlew setup
-\`\`\`
-
-## Configuration
-
-The template can be configured through the \`gradle.properties\` file:
-
-\`\`\`
-modId=mymod
-modName=My Awesome Mod
-modVersion=1.0.0
-minecraftVersion=1.20.1
-\`\`\`
-
-## Project Structure
-
-- \`src/main/java\`: Java source files
-- \`src/main/resources\`: Resource files (textures, models, etc.)
-- \`src/test\`: Test files
-- \`gradle\`: Gradle wrapper and build scripts
-
-## Best Practices
-
-When using this template, we recommend following these best practices:
-
-- Keep your mod ID short and descriptive
-- Use a consistent naming convention
-- Document your code thoroughly
-- Write unit tests for critical functionality
-- Maintain a changelog
+✅ - Added and Configured<br> **/** - Pending<br>❌ - Not Included<br>⚠️ - Version of Modloader Missing
 
 ## Support
 

@@ -98,22 +98,18 @@ export default function Home() {
     {
       icon: <Package className="h-6 w-6 text-primary"/>,
       title: "Minecraft Modpacks",
-      description: "Modpacks",
     },
     {
       icon: <Code className="h-6 w-6 text-primary"/>,
       title: "Minecraft Mods",
-      description: "Mods",
     },
     {
       icon: <Server className="h-6 w-6 text-primary"/>,
       title: "Server Plugins",
-      description: "Plugins",
     },
     {
       icon: <Globe className="h-6 w-6 text-primary"/>,
       title: "Minecraft Worlds",
-      description: "Minecraft Worlds",
     },
   ]
 
@@ -223,6 +219,15 @@ export default function Home() {
             >
               About <span className="text-primary">Soncresity Industries</span>
             </motion.h2>
+            <motion.p
+              className="text-lg text-foreground/80"
+              initial={{opacity: 0, y: 20}}
+              whileInView={{opacity: 1, y: 0}}
+              viewport={{once: true}}
+              transition={{duration: 0.5, delay: 0.1}}
+            >
+              We create a variety of Minecraft content, including:
+            </motion.p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -242,10 +247,6 @@ export default function Home() {
                     </div>
                     <CardTitle>{feature.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <CardDescription
-                      className="text-foreground/70">{feature.description}</CardDescription>
-                  </CardContent>
                 </Card>
               </motion.div>
             ))}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, ReactNode } from "react"
 import Link from "next/link"
 import { WikiContent } from "@/components/wiki/content"
 import { Button } from "@/components/ui/button"
@@ -21,7 +21,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 interface WikiPageTemplateProps {
   title: string
   titleImage: string
-  content: string
+  content: string | ReactNode
   lastUpdated?: string
   prevPage?: {
     title: string
@@ -40,16 +40,16 @@ interface WikiPageTemplateProps {
 }
 
 export function WikiPageTemplate({
-  title,
-  titleImage,
-  content,
-  lastUpdated,
-  prevPage,
-  nextPage,
-  breadcrumbs = [],
-  editUrl,
-  className
-}: WikiPageTemplateProps) {
+                                   title,
+                                   titleImage,
+                                   content,
+                                   lastUpdated,
+                                   prevPage,
+                                   nextPage,
+                                   breadcrumbs = [],
+                                   editUrl,
+                                   className
+                                 }: WikiPageTemplateProps) {
   const [copied, setCopied] = useState(false)
 
   const copyToClipboard = () => {
@@ -60,6 +60,13 @@ export function WikiPageTemplate({
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  const renderContent = () => {
+    if (typeof content === 'string') {
+      return <WikiContent content={content} className="mb-10" />
+    }
+    return <div className="mb-10">{content}</div>
   }
 
   return (
@@ -168,27 +175,26 @@ export function WikiPageTemplate({
       </div>
 
       {/* Content */}
-      <WikiContent content={content} className="mb-10" />
+      {renderContent()}
 
       {/* Navigation and Footer */}
       <Separator className="my-6" />
 
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
         <div className="flex-1">
-          {prevPage !== "#" && prevPage && (
+          {prevPage && (
             <Link href={prevPage.href} className="inline-block">
               <Button variant="ghost" className="flex items-center gap-2 hover:bg-muted">
                 <ChevronLeft className="h-4 w-4" />
                 <span className="flex flex-col items-start">
-            <span className="text-xs text-muted-foreground">Previous</span>
-            <span className="text-sm font-medium">{prevPage.title}</span>
-          </span>
+                  <span className="text-xs text-muted-foreground">Previous</span>
+                  <span className="text-sm font-medium">{prevPage.title}</span>
+                </span>
               </Button>
             </Link>
           )}
         </div>
 
-        {/* Scroll to Top Button */}
         <div>
           <Button
             variant="outline"
@@ -201,13 +207,13 @@ export function WikiPageTemplate({
         </div>
 
         <div className="flex-1 flex justify-end">
-          {nextPage !== "#" && nextPage && (
+          {nextPage && (
             <Link href={nextPage.href} className="inline-block">
               <Button variant="ghost" className="flex items-center gap-2 hover:bg-muted">
-          <span className="flex flex-col items-end">
-            <span className="text-xs text-muted-foreground">Next</span>
-            <span className="text-sm font-medium">{nextPage.title}</span>
-          </span>
+                <span className="flex flex-col items-end">
+                  <span className="text-xs text-muted-foreground">Next</span>
+                  <span className="text-sm font-medium">{nextPage.title}</span>
+                </span>
                 <ChevronRight className="h-4 w-4" />
               </Button>
             </Link>
