@@ -13,7 +13,7 @@ export default function MapPage() {
     const generateTileUrls = (rows: number, cols: number) => {
         return Array.from({ length: rows }, (_, row) =>
             Array.from({ length: cols }, (_, col) =>
-                `tile-${row + 1}-${col + 1}.png`
+                `tile-${row + 1}-${col + 1}.jpg`
             )
         );
     };
