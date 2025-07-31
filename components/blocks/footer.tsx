@@ -170,6 +170,16 @@ export default function Footer() {
                                                   className="opacity-0 group-hover:opacity-100 transition-opacity"/>
                                 </a>
                             </li>
+                            <li>
+                                <a
+                                    href="/map"
+                                    className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
+                                >
+                                    Sodonia World Map
+                                    <ExternalLink size={14}
+                                                  className="opacity-0 group-hover:opacity-100 transition-opacity"/>
+                                </a>
+                            </li>
                         </ul>
                     </motion.div>
 
